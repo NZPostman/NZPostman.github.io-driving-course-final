@@ -1,0 +1,70 @@
+﻿*{
+    font-family:'Courier New'
+}
+img{
+    width: 100%;
+}
+
+.hero-image {
+    background-image: url("./Images/IMG_20260322_213203.jpg");
+    height: 800px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.hero-text{
+    color: black;
+    position: fixed;
+    top: 100px;
+    text-align:center;
+    width: 100%;
+    font-size: 5rem;
+}
+.hero-goal{
+    color: white;
+    position: fixed;
+    top: 350px;
+    width: 25%;
+    font-size: 3rem;
+    text-align:left;
+    margin-left: 50%
+}
+.hero-lesson{
+    color: white;
+    position: fixed;
+    top: 350px;
+    width: 25%;
+    font-size: 3rem;
+    text-align: right;
+    margin-right: 50%;
+}
+.two-column{ 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    width: 90%;
+    margin: auto;
+    margin-top: 40px;
+    font-size: 1.25em;
+}
+nav {
+    position: absolute;
+    left: 12%;
+}
+.hero-goal, .hero-lesson {
+    text-decoration: none; 
+    color: white; 
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff5100;
+  color: #ffffff;
+  text-decoration: none; 
+  border-radius: 50px;
+  font-family: sans-serif;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.2s ease;
+}
+.hero-goal:hover, .hero-lesson:hover {
+  background-color: #0056b3;
+}
