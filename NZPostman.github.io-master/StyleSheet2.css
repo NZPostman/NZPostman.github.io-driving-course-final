@@ -13,20 +13,38 @@ img{
     background-size: cover;
 }
 .hero-text{
+    /* text */
     color: white;
-    position: fixed;
-    top: 100px;
-    text-align:center;
-    width: 100%;
     font-size: 5rem;
+    text-align:center;
+
+    /* postitioning */  
+    width: 100%;
+    top: 100px;
+    position: fixed;
+    
+    /* Add a semi-transparent background to the text */
+    padding: 15px 30px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.85);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 }
 .body-paragraph{
-    color: white;
-    font-size: 1.25rem;
+    font-size: 1.35rem;
+    font-weight:500;
+    line-height: 1.1;
     position: fixed;
     text-align: center;
-    margin-top: 20px;
-    margin: auto;
+    max-width: 1300px;
+    margin: 20px auto;
     top: 400px;
+    left: 50%;
+    transform: translateX(-50%);
     width: 90%;
+    /* Add a semi-transparent background to the paragraph */
+    color: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.85);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 }
