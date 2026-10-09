@@ -13,17 +13,30 @@ img{
     background-size: cover;
 }
 .hero-text{
-    color: black;
-    position: fixed;
-    top: 100px;
-    text-align:center;
-    width: 100%;
+    /* text */
+    color: white;
     font-size: 5rem;
+    text-align:center;
+
+    /* postitioning */  
+    width: 100%;
+    top: 100px;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 800px;
+
+    /* background */
+    padding: 15px 30px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.85);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 }
 .hero-goal{
     color: white;
     position: fixed;
-    top: 350px;
+    top: 400px;
     width: 25%;
     font-size: 3rem;
     text-align:left;
@@ -32,7 +45,7 @@ img{
 .hero-lesson{
     color: white;
     position: fixed;
-    top: 350px;
+    top: 400px;
     width: 25%;
     font-size: 3rem;
     text-align: right;
