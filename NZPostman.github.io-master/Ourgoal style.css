@@ -20,7 +20,7 @@ img{
 
     /* postitioning */  
     width: 100%;
-    top: 100px;
+    top: 50px;
     position: fixed;
     left: 50%;
     transform: translateX(-50%);
@@ -43,10 +43,13 @@ img{
     /* postitioning */
     max-width: 1300px;
     margin: 20px auto;
-    top: 350px;
+    bottom: 75px;
+    margin-top: 20px;
     left: 50%;
     transform: translateX(-50%);
     width: 90%;
+    max-height: 45vh;
+    overflow-y: auto;
     position: fixed;
     text-align: center;
 

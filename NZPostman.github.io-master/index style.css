@@ -33,24 +33,6 @@ img{
     background-color: rgba(0, 0, 0, 0.85);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 }
-.hero-goal{
-    color: white;
-    position: fixed;
-    top: 400px;
-    width: 25%;
-    font-size: 3rem;
-    text-align:left;
-    margin-left: 50%
-}
-.hero-lesson{
-    color: white;
-    position: fixed;
-    top: 400px;
-    width: 25%;
-    font-size: 3rem;
-    text-align: right;
-    margin-right: 50%;
-}
 .two-column{ 
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -61,23 +43,32 @@ img{
     font-size: 1.25em;
 }
 nav {
-    position: absolute;
-    left: 12%;
+    position: fixed;
+    top: 400px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    z-index: 10;
 }
 .hero-goal, .hero-lesson {
+    display: inline-block;
+    padding: 18px 38px;
+    background-color: #ff5100;
+    color: white;
+    font-family: sans-serif;    
+    font-weight: bold;
+    font-size: 3rem;
     text-decoration: none; 
-    color: white; 
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #ff5100;
-  color: #ffffff;
-  text-decoration: none; 
-  border-radius: 50px;
-  font-family: sans-serif;
-  font-weight: bold;
-  text-align: center;
-  transition: background-color 0.2s ease;
+    border-radius: 50px;
+    text-align: center;
+    transition: background-color 0.2s ease, transform 0.2s ease; 
 }
 .hero-goal:hover, .hero-lesson:hover {
-  background-color: #0056b3;
+    background-color: #0056b3;
+    transform: translateY(-2px);
 }
