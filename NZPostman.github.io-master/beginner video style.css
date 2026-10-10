@@ -1,0 +1,50 @@
+/* Page background setup */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: sans-serif;
+}
+
+/* position */
+.video-container {
+    width: 90%;
+    max-width: 1500px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* video scale */
+.video-container video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Back button */
+.back-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: white;
+    font-family: sans-serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.back-btn:hover {
+    background-color: #ff5100;
+    transform: translateY(-2px);
+}
