@@ -1,0 +1,112 @@
+*{
+    font-family:'Courier New'
+}
+img{
+    width: 100%;
+}
+.hero-image {
+    background-image: url("./Images/IMG20250301143314.jpg");
+    height: 800px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.hero-text{
+    /* text */
+    color: white;
+    font-size: 5rem;
+    text-align:center;
+
+    /* postitioning */  
+    top: 30px;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 750px;
+
+    /* background */
+    padding: 15px 30px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.85);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+.body-paragraph{
+   /* text */
+    font-size: 1.35rem;
+    font-weight:500;
+    line-height: 1.1;
+    color: white;
+    
+    /* postitioning */
+    max-width: 85%;
+    margin: 20px auto;
+    bottom: 20px;
+    margin-top: 20px;
+    left: 50%;
+    top: 60%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 1000px;
+    max-height: 10vh;
+    overflow-y: auto;
+    position: fixed;
+    text-align: center;
+    height: auto;
+
+    /* background */
+    padding: 20px 30px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.85);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+
+}
+.back-btn{
+    /* position */
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 100;
+
+    /* text */
+    background-color: rgba(0, 0, 0, 0.85);
+    color: white;
+    font-family: sans-serif !important;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+
+    /* padding and border */
+    padding: 10px 18px;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+.back-btn:hover {
+    background-color: #ff5100;
+    transform: translateY(-2px);
+}
+.next-btn{
+    /* position */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+
+    /* text */
+    background-color: #ff5100;
+    color: white;
+    font-family: sans-serif !important;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+
+    /* padding and border */
+    padding: 12px 24px;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}   
+.next-btn:hover {
+    background-color: #0056b3; 
+    transform: translateY(-2px);
+}
