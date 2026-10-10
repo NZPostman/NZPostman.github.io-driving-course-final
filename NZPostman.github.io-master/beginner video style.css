@@ -48,3 +48,30 @@ body {
     background-color: #ff5100;
     transform: translateY(-2px);
 }
+/* Hides the button until JavaScript */
+.hidden {
+    display: none;
+}
+
+/* Styling */
+.next-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+    background-color: #ff5100;
+    color: white;
+    font-family: sans-serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.next-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}

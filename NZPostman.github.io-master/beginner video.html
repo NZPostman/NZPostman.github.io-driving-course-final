@@ -13,10 +13,23 @@
 
     <!-- Video Container -->
     <div class="video-container">
-        <video src="./Images/Editedness.mp4" autoplay playsinline controls width="100%">
-    Your browser does not support the video tag.
+        <video id="lessonVideo" src="./Images/2026-10-10 14-29-05.mp4" autoplay playsinline controls width="100%">
+            Your browser does not support the video tag.
         </video>
     </div>
+
+    <!-- Next Button (Initially Hidden) -->
+    <a href="beginner quiz.html" id="nextBtn" class="next-btn hidden">Next &#8594;</a>
+
+    <!-- Unlock Script -->
+    <script>
+        const video = document.getElementById('lessonVideo');
+        const nextBtn = document.getElementById('nextBtn');
+
+        video.addEventListener('ended', () => {
+            nextBtn.classList.remove('hidden');
+        });
+    </script>
 
 </body>
 </html>
