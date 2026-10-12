@@ -47,47 +47,43 @@
         const submitBtn = document.getElementById('submitBtn');
         const nextBtn = document.getElementById('nextBtn');
 
-        submitBtn.addEventListener('click', () => {
-            const selected = document.querySelector('input[name="q2"]:checked');
+       submitBtn.addEventListener('click', () => {
+    const selected = document.querySelector('input[name="q2"]:checked');
 
-            if (!selected) {
-                alert('Please select an answer');
-                return;
-            }
+    if (!selected) {
+        alert('Please select an answer');
+        return;
+    }
 
-            // Remove any previous highlights
-            const labels = document.querySelectorAll('.question label');
-            labels.forEach(label => {
-                label.classList.remove('correct-highlight', 'wrong-highlight');
-            });
+    // Remove any previous highlights
+    const labels = document.querySelectorAll('.question label');
+    labels.forEach(label => {
+        label.classList.remove('correct-highlight', 'wrong-highlight');
+    });
 
-            // Evaluate answer
-            const selectedLabel = selected.parentElement;
-            if (selected.value === 'correct') {
-                selectedLabel.classList.add('correct-highlight');
-            } else {
-                selectedLabel.classList.add('wrong-highlight');
-                
-                // Automatically show the correct answer as well
-                const correctInput = document.querySelector('input[value="correct"]');
-                if (correctInput) {
-                    correctInput.parentElement.classList.add('correct-highlight');
-                }
-            }
+    // Check if the answer is correct and update localStorage score
+    if (selected.value === 'correct') {
+        let currentScore = parseInt(localStorage.getItem('quizScore')) || 0;
+        localStorage.setItem('quizScore', currentScore + 1);
+    }
 
-            // Reveal the Next button
-            nextBtn.classList.remove('hidden');
-        });
-        // Example score tracking (adjust numbers based on user's results)
-        let totalCorrect = 3; // Number of correct answers they got
-        let totalQuestions = 3; // Total questions in your quiz
+    // Evaluate answer
+    const selectedLabel = selected.parentElement;
+    if (selected.value === 'correct') {
+        selectedLabel.classList.add('correct-highlight');
+    } else {
+        selectedLabel.classList.add('wrong-highlight');
+        
+        // Automatically show the correct answer as well
+        const correctInput = document.querySelector('input[value="correct"]');
+        if (correctInput) {
+            correctInput.parentElement.classList.add('correct-highlight');
+        }
+    }
 
-        // Save to browser memory
-        localStorage.setItem('quizScore', totalCorrect);
-        localStorage.setItem('totalQuestions', totalQuestions);
-
-        // Redirect to finish page
-        window.location.href = 'beginner quiz finish.html';
+    // Reveal the Next button
+    nextBtn.classList.remove('hidden');
+}); 
     </script>
 </body>
 </html>
