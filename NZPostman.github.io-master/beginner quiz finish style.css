@@ -1,4 +1,4 @@
-/* Centers everything on a dark background */
+/* Centers everything on the exact same dark background */
 body {
     margin: 0;
     padding: 0;
@@ -11,35 +11,36 @@ body {
     min-height: 100vh;
 }
 
-/* Translucent content card */
+/* Translucent content card matching the quiz container */
 .quiz-container {
     background-color: rgba(20, 20, 20, 0.95);
     padding: 40px;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
     width: 90%;
-    max-width: 600px;
-    text-align: center;
+    max-width: 700px;
 }
 
+/* Heading style */
 .quiz-container h2 {
     margin-top: 0;
     font-size: 2rem;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
+/* Question text layout style */
 .question {
-    font-size: 1.2rem;
-    line-height: 1.6;
+    font-size: 1.1rem;
+    line-height: 1.5;
 }
 
 .status-msg {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     font-weight: bold;
     margin-top: 15px;
 }
 
-/* Action Buttons Styling */
+/* Action Button styling matching your other next/back buttons */
 .action-btn {
     display: inline-block;
     background-color: #ff5100;
@@ -48,7 +49,7 @@ body {
     font-size: 1.1rem;
     font-weight: bold;
     text-decoration: none !important;
-    padding: 12px 28px;
+    padding: 12px 24px;
     border-radius: 50px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     transition: background-color 0.2s ease, transform 0.2s ease;
