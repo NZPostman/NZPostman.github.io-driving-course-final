@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beginner Quiz</title>
+    <link rel="stylesheet" href="quiz styling.css" />
+</head>
+<body>
+
+    <!-- Back Button -->
+    <a href="beginner quiz Q2.html" class="back-btn">&#8592; Back</a>
+
+    <!-- Quiz Container -->
+    <div class="quiz-container">
+        <h2>Quiz</h2>
+        <form id="quizForm">
+            <div class="question">
+                <p>3. What position should your hands be in on the steering wheel?</p>
+                
+                <label>
+                    <input type="radio" name="q3" value="correct"> 
+                    At the 9 and 3 o'clock positions
+                </label>
+                
+                <label>
+                    <input type="radio" name="q3" value="wrong"> 
+                    At the 10 and 2 o'clock positions
+                </label>
+                
+                <label>
+                    <input type="radio" name="q3" value="wrong"> 
+                    Just at the top of the steering wheel
+                </label>
+            </div>
+
+            <!-- Submit Answer Button -->
+            <button type="button" id="submitBtn" class="submit-btn">Submit Answer</button>
+        </form>
+    </div>
+
+    <!-- Next Button (Initially Hidden) -->
+    <a href="next_question.html" id="nextBtn" class="next-btn hidden">Next question &#8594;</a>
+
+    <!-- Quiz Logic Script -->
+    <script>
+        const submitBtn = document.getElementById('submitBtn');
+        const nextBtn = document.getElementById('nextBtn');
+
+        submitBtn.addEventListener('click', () => {
+            const selected = document.querySelector('input[name="q3"]:checked');
+
+            if (!selected) {
+                alert('Please select an answer');
+                return;
+            }
+
+            // Remove any previous highlights
+            const labels = document.querySelectorAll('.question label');
+            labels.forEach(label => {
+                label.classList.remove('correct-highlight', 'wrong-highlight');
+            });
+
+            // Evaluate answer
+            const selectedLabel = selected.parentElement;
+            if (selected.value === 'correct') {
+                selectedLabel.classList.add('correct-highlight');
+            } else {
+                selectedLabel.classList.add('wrong-highlight');
+                
+                // Automatically show the correct answer as well
+                const correctInput = document.querySelector('input[value="correct"]');
+                if (correctInput) {
+                    correctInput.parentElement.classList.add('correct-highlight');
+                }
+            }
+
+            // Reveal the Next button
+            nextBtn.classList.remove('hidden');
+        });
+    </script>
+
+</body>
+</html>
