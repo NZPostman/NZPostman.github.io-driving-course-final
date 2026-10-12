@@ -20,15 +20,21 @@
 
     <!-- Next Button (Initially Hidden) -->
     <a href="beginner quiz Q1.html" id="nextBtn" class="next-btn hidden">Next &#8594;</a>
-
-    <!-- Unlock Script -->
+    
+    <!-- Script -->
     <script>
-        const video = document.getElementById('lessonVideo');
-        const nextBtn = document.getElementById('nextBtn');
+    const video = document.getElementById('lessonVideo');
+    const nextBtn = document.getElementById('nextBtn');
 
-        video.addEventListener('ended', () => {
-            nextBtn.classList.remove('hidden');
-        });
+    // Show the next button when the video ends
+    video.addEventListener('ended', () => {
+        nextBtn.classList.remove('hidden');
+    });
+
+    // Reset the quiz score to 0 the moment they click to start the quiz
+    nextBtn.addEventListener('click', () => {
+        localStorage.setItem('quizScore', 0);
+    });
     </script>
 
 </body>
