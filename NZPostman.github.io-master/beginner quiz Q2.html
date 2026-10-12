@@ -40,7 +40,7 @@
     </div>
 
     <!-- Next Button (Initially Hidden) -->
-    <a href="next_question.html" id="nextBtn" class="next-btn hidden">Next question &#8594;</a>
+    <a href="beginner quiz Q3.html" id="nextBtn" class="next-btn hidden">Next question &#8594;</a>
 
     <!-- Quiz Logic Script -->
     <script>
@@ -78,7 +78,16 @@
             // Reveal the Next button
             nextBtn.classList.remove('hidden');
         });
-    </script>
+        // Example score tracking (adjust numbers based on user's results)
+        let totalCorrect = 3; // Number of correct answers they got
+        let totalQuestions = 3; // Total questions in your quiz
 
+        // Save to browser memory
+        localStorage.setItem('quizScore', totalCorrect);
+        localStorage.setItem('totalQuestions', totalQuestions);
+
+        // Redirect to finish page
+        window.location.href = 'beginner quiz finish.html';
+    </script>
 </body>
 </html>

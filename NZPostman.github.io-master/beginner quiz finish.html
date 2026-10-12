@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz Results</title>
+    <link rel="stylesheet" href="finish style.css" />
+</head>
+<body>
+
+    <!-- Results Container -->
+    <div class="quiz-container">
+        <h2>Quiz Results</h2>
+        
+        <div id="resultContent" class="question">
+            <p id="scoreText">Calculating your score...</p>
+            <p id="statusText" class="status-msg"></p>
+        </div>
+
+        <!-- Dynamic Action Buttons Container -->
+        <div id="buttonContainer" style="margin-top: 25px;"></div>
+    </div>
+
+    <!-- Results Logic Script -->
+    <script>
+        // Retrieve score from localStorage
+        const score = parseInt(localStorage.getItem('quizScore')) || 0;
+        const total = parseInt(localStorage.getItem('totalQuestions')) || 3;
+        
+        const scoreText = document.getElementById('scoreText');
+        const statusText = document.getElementById('statusText');
+        const buttonContainer = document.getElementById('buttonContainer');
+
+        // Display raw score
+        scoreText.innerHTML = `You got <strong>${score}</strong> out of <strong>${total}</strong> correct.`;
+
+        // Pass condition (e.g., must get 100% or passing threshold, adjust as needed)
+        // Let's say passing means getting all correct, or you can change to (score >= 2)
+        const passingScore = total; 
+
+        if (score >= passingScore) {
+            // PASS STATE
+            statusText.textContent = "Status: PASSED 🎉";
+            statusText.style.color = "#28a745"; // Green
+            
+            // Show Finish button taking them back to main menu (index.html)
+            buttonContainer.innerHTML = `
+                <a href="index.html" class="action-btn finish-action">Finish to Main Menu</a>
+            `;
+        } else {
+            // FAIL STATE
+            statusText.textContent = "Status: FAILED - Try Again ❌";
+            statusText.style.color = "#dc3545"; // Red
+            
+            // Show Restart button taking them back to the start of the quiz
+            buttonContainer.innerHTML = `
+                <a href="beginner quiz.html" class="action-btn restart-action">Restart Quiz</a>
+            `;
+        }
+    </script>
+
+</body>
+</html>
