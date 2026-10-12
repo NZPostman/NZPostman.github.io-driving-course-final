@@ -22,8 +22,7 @@
     </div>
 
     <!-- Results Logic Script -->
-    <script>
-        // Retrieve score from localStorage
+   <script>
         const score = parseInt(localStorage.getItem('quizScore')) || 0;
         const total = parseInt(localStorage.getItem('totalQuestions')) || 3;
         
@@ -31,30 +30,42 @@
         const statusText = document.getElementById('statusText');
         const buttonContainer = document.getElementById('buttonContainer');
 
-        // Display raw score
         scoreText.innerHTML = `You got <strong>${score}</strong> out of <strong>${total}</strong> correct.`;
 
-        // Let's say passing means getting all correct, or you can change to (score >= 2)
         const passingScore = total; 
 
         if (score >= passingScore) {
-            // PASS STATE
             statusText.textContent = "Status: PASSED 🎉";
             statusText.style.color = "#28a745"; // Green
             
-            // Show Finish button 
+            // Added id="menuBtn" so we can target it below
             buttonContainer.innerHTML = `
-                <a href="index.html" class="action-btn finish-action">Finish to Main Menu</a>
+                <a href="index.html" id="menuBtn" class="action-btn">Finish to Main Menu</a>
             `;
         } else {
-            // FAIL STATE
             statusText.textContent = "Status: FAILED - Try Again ❌";
             statusText.style.color = "#dc3545"; // Red
             
-            // Show Restart button 
+            // Added id="restartBtn" so we can target it below
             buttonContainer.innerHTML = `
-                <a href="beginner quiz.html" class="action-btn restart-action">Restart Quiz</a>
+                <a href="beginner quiz Q1.html" id="restartBtn" class="action-btn">Restart Quiz</a>
             `;
+        }
+
+        // Reset the score to 0 whichever button gets clicked
+        const menuBtn = document.getElementById('menuBtn');
+        const restartBtn = document.getElementById('restartBtn');
+
+        if (menuBtn) {
+            menuBtn.addEventListener('click', () => {
+                localStorage.setItem('quizScore', 0);
+            });
+        }
+
+        if (restartBtn) {
+            restartBtn.addEventListener('click', () => {
+                localStorage.setItem('quizScore', 0);
+            });
         }
     </script>
 
