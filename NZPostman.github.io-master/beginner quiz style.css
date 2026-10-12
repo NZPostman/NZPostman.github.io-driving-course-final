@@ -11,7 +11,7 @@ body {
     min-height: 100vh;
 }
 
-/* The dark content box matching your other pages */
+/*  content box  */
 .quiz-container {
     background-color: rgba(20, 20, 20, 0.95);
     padding: 40px;
@@ -39,7 +39,7 @@ body {
     margin-bottom: 15px;
 }
 
-/* Styles each option row neatly */
+/* Style */
 .question label {
     display: block;
     background-color: rgba(255, 255, 255, 0.05);
@@ -54,19 +54,37 @@ body {
     background-color: rgba(255, 255, 255, 0.15);
 }
 
-/* Space out the radio circle from the text */
+/* Space out the radio circles */
 .question input[type="radio"] {
     margin-right: 12px;
     transform: scale(1.2);
 }
 
-/* Hides the finish button until triggered */
+/* Hides finish  */
 .hidden {
     display: none !important;
 }
 
-/* Finish Button (Bottom Right) */
-.finish-btn {
+/* Submit Button Styling */
+.submit-btn {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.2s ease;
+}
+
+.submit-btn:hover {
+    background-color: #004085;
+}
+
+/* Next Button Styling */
+.next-btn {
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -83,12 +101,24 @@ body {
     transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
-.finish-btn:hover {
+.next-btn:hover {
     background-color: #0056b3;
     transform: translateY(-2px);
 }
 
-/* Back Button (Top Left) */
+/* Correct Answer Highlight  */
+.correct-highlight {
+    background-color: rgba(40, 167, 69, 0.35) !important;
+    border: 1px solid #28a745;
+}
+
+/* Incorrect Answer Highlight  */
+.wrong-highlight {
+    background-color: rgba(220, 53, 69, 0.35) !important;
+    border: 1px solid #dc3545;
+}
+
+/* Back Button  */
 .back-btn {
     position: fixed;
     top: 20px;
