@@ -1,3 +1,4 @@
+/* Centers everything on a dark background */
 body {
     margin: 0;
     padding: 0;
@@ -10,57 +11,61 @@ body {
     min-height: 100vh;
 }
 
+/* The dark content box matching your other pages */
 .quiz-container {
-    background-color: rgba(0, 0, 0, 0.85);
-    padding: 30px 40px;
+    background-color: rgba(20, 20, 20, 0.95);
+    padding: 40px;
     border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
     width: 90%;
-    max-width: 800px;
-    box-sizing: border-box;
+    max-width: 700px;
 }
 
-.quiz-container h2 {
+/* Quiz Heading */
+.quiz-container h1 {
     margin-top: 0;
-    font-size: 1.8rem;
-    text-align: center;
-    margin-bottom: 25px;
+    font-size: 2rem;
+    margin-bottom: 20px;
 }
 
+/* Question layout */
 .question {
-    margin-bottom: 20px;
-    font-size: 1.2rem;
-    line-height: 1.4;
+    font-size: 1.1rem;
+    line-height: 1.5;
 }
 
 .question p {
-    margin-bottom: 12px;
-    font-weight: 500;
+    font-weight: bold;
+    margin-bottom: 15px;
 }
 
+/* Styles each option row neatly */
 .question label {
     display: block;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 12px 16px;
     margin-bottom: 10px;
+    border-radius: 8px;
     cursor: pointer;
-    font-size: 1.1rem;
-    padding: 8px 12px;
-    border-radius: 6px;
     transition: background-color 0.2s ease;
 }
 
 .question label:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.15);
 }
 
-.question input[type="answer"] {
-    margin-right: 10px;
+/* Space out the radio circle from the text */
+.question input[type="radio"] {
+    margin-right: 12px;
     transform: scale(1.2);
 }
 
+/* Hides the finish button until triggered */
 .hidden {
     display: none !important;
 }
 
+/* Finish Button (Bottom Right) */
 .finish-btn {
     position: fixed;
     bottom: 20px;
@@ -83,6 +88,7 @@ body {
     transform: translateY(-2px);
 }
 
+/* Back Button (Top Left) */
 .back-btn {
     position: fixed;
     top: 20px;
