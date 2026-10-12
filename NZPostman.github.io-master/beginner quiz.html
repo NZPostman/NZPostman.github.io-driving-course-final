@@ -18,9 +18,9 @@
             <!-- Question 1 -->
             <div class="question">
                 <p>1. What is the most important part of your initial driving position?</p>
-                <label><input type="radio" name="q1" value="wrong"> The distance between you and the radio controls</label><br>
-                <label><input type="radio" name="q1" value="correct"> Steering wheel and seating position</label><br>
-                <label><input type="radio" name="q1" value="wrong"> How much leg room the backseat passenger has</label>
+                <label><input type="answer" name="q1" value="wrong"> The distance between you and the radio controls</label><br>
+                <label><input type="answer" name="q1" value="correct"> Steering wheel and seating position</label><br>
+                <label><input type="answer" name="q1" value="wrong"> How much leg room the backseat passenger has</label>
             </div>
 
             <!-- Add more questions here if needed -->
@@ -36,7 +36,7 @@
         const finishBtn = document.getElementById('finishBtn');
 
         form.addEventListener('change', () => {
-            const answered = form.querySelectorAll('input[type="radio"]:checked');
+            const answered = form.querySelectorAll('input[type="answer"]:checked');
             
             if (answered.length >= 1) {
                 finishBtn.classList.remove('hidden');
