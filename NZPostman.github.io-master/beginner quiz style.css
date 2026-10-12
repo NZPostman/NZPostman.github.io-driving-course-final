@@ -55,7 +55,7 @@ body {
 }
 
 /* Space out the radio circle from the text */
-.question input[type="radio"] {
+.question input[type="answer"] {
     margin-right: 12px;
     transform: scale(1.2);
 }
