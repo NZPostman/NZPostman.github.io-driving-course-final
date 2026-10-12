@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beginner Quiz</title>
+    <link rel="stylesheet" href="beginner quiz style.css" />
+</head>
+<body>
+
+    <!-- Back Button -->
+    <a href="beginner video.html" class="back-btn">&#8592; Back</a>
+
+    <!-- Quiz Container -->
+    <div class="quiz-container">
+        <h1>Quiz</h1>
+        <form id="quizForm">
+            <!-- Question 1 -->
+            <div class="question">
+                <p>1. What is the most important part of your initial driving position?</p>
+                <label><input type="radio" name="q1" value="wrong"> The distance between you and the radio controls</label><br>
+                <label><input type="radio" name="q1" value="correct"> Steering wheel and seating position</label><br>
+                <label><input type="radio" name="q1" value="wrong"> How much leg room the backseat passenger has</label>
+            </div>
+
+            <!-- Add more questions here if needed -->
+        </form>
+    </div>
+
+    <!-- Finish Button (Initially Hidden) -->
+    <a href="completion.html" id="finishBtn" class="finish-btn hidden">Finish &#8594;</a>
+
+    <!-- Quiz Script -->
+    <script>
+        const form = document.getElementById('quizForm');
+        const finishBtn = document.getElementById('finishBtn');
+
+        form.addEventListener('change', () => {
+            const answered = form.querySelectorAll('input[type="radio"]:checked');
+            
+            if (answered.length >= 1) {
+                finishBtn.classList.remove('hidden');
+            }
+        });
+    </script>
+
+</body>
+</html>

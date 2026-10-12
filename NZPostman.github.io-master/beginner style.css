@@ -14,7 +14,7 @@ img{
 .hero-text{
     /* text */
     color: white;
-    font-size: 5rem;
+    font-size: 3rem;
     text-align:center;
 
     /* postitioning */  
@@ -47,7 +47,7 @@ img{
     top: 60%;
     transform: translateX(-50%) translateY(-50%);
     width: 1000px;
-    max-height: 15vh;
+    max-height: 45vh;
     overflow-y: auto;
     position: fixed;
     text-align: center;
